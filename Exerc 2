@@ -8,7 +8,7 @@ Quando decidir parar, o programa deve mostrar o total acumulado.
 
 #include <stdio.h>
 
-int main(void)
+int main()
 {
     int opcao;
     float total = 0.0;
