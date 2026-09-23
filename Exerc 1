@@ -1,0 +1,38 @@
+/*
+Questao 1
+Um condominio quer monitorar o consumo de agua de cada morador.
+Escreva um programa que leia o consumo mensal de agua (em m3) de
+5 moradores. Para cada morador, informe se o consumo esta dentro
+da media (ate 20 m3) ou acima. Ao final, mostre o consumo medio geral.
+*/
+
+#include <stdio.h>
+
+#define NUM_MORADORES 5
+#define LIMITE_MEDIA  20.0
+
+int main(void)
+{
+    float consumo;
+    float soma = 0.0;
+    float media;
+    int i;
+
+    for (i = 1; i <= NUM_MORADORES; i++) {
+        printf("Consumo do morador %d (m3): ", i);
+        scanf("%f", &consumo);
+
+        soma += consumo;
+
+        if (consumo <= LIMITE_MEDIA) {
+            printf("Morador %d: dentro da media.\n\n", i);
+        } else {
+            printf("Morador %d: acima da media.\n\n", i);
+        }
+    }
+
+    media = soma / NUM_MORADORES;
+    printf("Consumo medio geral: %.2f m3\n", media);
+
+    return 0;
+}
