@@ -1,0 +1,39 @@
+/*
+Questao 4
+Um aplicativo quer acompanhar a meta diaria de passos de um usuario.
+Faca um programa que leia a quantidade de passos dados por um usuario
+a cada hora. O programa deve parar quando o total atingir ou
+ultrapassar 10.000 passos e entao informar quantas horas foram
+necessarias.
+*/
+
+#include <stdio.h>
+
+#define META_PASSOS 10000
+
+int main(void)
+{
+    int passos;
+    int total = 0;
+    int horas = 0;
+
+    while (total < META_PASSOS) {
+        printf("Passos na hora %d: ", horas + 1);
+        scanf("%d", &passos);
+
+        /* ignora valores negativos sem contar a hora */
+        if (passos < 0) {
+            printf("Valor invalido.\n");
+            continue;
+        }
+
+        total += passos;
+        horas++;
+
+        printf("Total acumulado: %d passos\n\n", total);
+    }
+
+    printf("Meta atingida! Total: %d passos em %d hora(s).\n", total, horas);
+
+    return 0;
+}
