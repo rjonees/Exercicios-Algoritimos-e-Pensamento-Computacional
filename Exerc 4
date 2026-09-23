@@ -11,7 +11,7 @@ necessarias.
 
 #define META_PASSOS 10000
 
-int main(void)
+int main()
 {
     int passos;
     int total = 0;
