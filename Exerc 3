@@ -10,7 +10,7 @@ deve exibir uma mensagem de alerta.
 
 #define NUM_CLIENTES 10
 
-int main(void)
+int main()
 {
     float nota;
     float soma = 0.0;
