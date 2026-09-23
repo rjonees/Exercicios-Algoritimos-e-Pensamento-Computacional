@@ -1,0 +1,50 @@
+/*
+Questao 2
+Um jovem quer juntar dinheiro e acompanhar o saldo do seu cofrinho.
+Faca um programa que simule um cofrinho digital. O usuario pode
+adicionar moedas de R$0,50, R$1,00 ou R$2,00 quantas vezes quiser.
+Quando decidir parar, o programa deve mostrar o total acumulado.
+*/
+
+#include <stdio.h>
+
+int main(void)
+{
+    int opcao;
+    float total = 0.0;
+
+    do {
+        printf("\n--- Cofrinho Digital ---\n");
+        printf("1 - Adicionar moeda de R$ 0,50\n");
+        printf("2 - Adicionar moeda de R$ 1,00\n");
+        printf("3 - Adicionar moeda de R$ 2,00\n");
+        printf("0 - Parar e mostrar o total\n");
+        printf("Opcao: ");
+        scanf("%d", &opcao);
+
+        switch (opcao) {
+            case 1:
+                total += 0.50;
+                break;
+            case 2:
+                total += 1.00;
+                break;
+            case 3:
+                total += 2.00;
+                break;
+            case 0:
+                break;
+            default:
+                printf("Opcao invalida.\n");
+        }
+
+        if (opcao >= 1 && opcao <= 3) {
+            printf("Saldo atual: R$ %.2f\n", total);
+        }
+
+    } while (opcao != 0);
+
+    printf("\nTotal acumulado: R$ %.2f\n", total);
+
+    return 0;
+}
