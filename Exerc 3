@@ -1,0 +1,43 @@
+/*
+Questao 3
+Uma loja quer saber a nota media do atendimento dos clientes.
+Um sistema deve ler a nota de atendimento (de 0 a 10) de 10
+clientes e calcular a media geral. Se a media for menor que 7,
+deve exibir uma mensagem de alerta.
+*/
+
+#include <stdio.h>
+
+#define NUM_CLIENTES 10
+
+int main(void)
+{
+    float nota;
+    float soma = 0.0;
+    float media;
+    int i;
+
+    for (i = 1; i <= NUM_CLIENTES; i++) {
+
+        /* repete a leitura ate a nota estar entre 0 e 10 */
+        do {
+            printf("Nota do cliente %d (0 a 10): ", i);
+            scanf("%f", &nota);
+
+            if (nota < 0 || nota > 10) {
+                printf("Nota invalida. Tente novamente.\n");
+            }
+        } while (nota < 0 || nota > 10);
+
+        soma += nota;
+    }
+
+    media = soma / NUM_CLIENTES;
+    printf("\nMedia geral do atendimento: %.2f\n", media);
+
+    if (media < 7.0) {
+        printf("ALERTA: a media esta abaixo de 7. O atendimento precisa melhorar.\n");
+    }
+
+    return 0;
+}
