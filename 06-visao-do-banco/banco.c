@@ -49,11 +49,11 @@ int abrirBanco(struct cliente c[]) {
 }
 
 
-/* ===================================================================
+/*
    CONSULTAR HISTORICO
    As 5 secoes do enunciado. Cada secao = um for passando pelos
    clientes + um if escolhendo quem aparece.
-   =================================================================== */
+*/
 void consultarHistorico(struct cliente c[], int n) {
 
     /* SECAO 1: saldo total do banco (cofrinho) */
@@ -64,10 +64,7 @@ void consultarHistorico(struct cliente c[], int n) {
     printf("\n== Saldo Total do banco ==\n");
     printf("%d clientes | R$ %.2f\n", n, total);
 
-    /* SECAO 2: aptos a emprestimo
-       Regra: poupanca COM saldo E conta corrente E nao pegou antes.
-       Limite: 25% de 10 vezes o saldo. Escolha: "saldo total da conta"
-       = saldo da poupanca, que e a conta exigida pela regra. */
+    /* SECAO 2: aptos a emprestimo */
     printf("\n== Clientes Aptos a Emprestimos ==\n");
     for (int i = 0; i < n; i++) {
         if (c[i].temPoupanca == 1 && c[i].saldoPoupanca > 0 &&
@@ -109,14 +106,14 @@ void consultarHistorico(struct cliente c[], int n) {
 }
 
 
-/* ===================================================================
+/*
    EFETUAR SORTEIO
    1. acha os 5 maiores saldos (conta salario, que e a dos titulos)
    2. confere se os 5 compraram titulo
    3. cada um informa um numero -> soma de Fibonacci
    4. vence a maior soma que for PRIMA (criterio da aula)
    5. premio = 10 vezes o saldo da conta do vencedor
-   =================================================================== */
+*/
 void efetuarSorteio(struct cliente c[], int n) {
 
     if (n < 5) {
@@ -180,11 +177,11 @@ void efetuarSorteio(struct cliente c[], int n) {
 }
 
 
-/* ===================================================================
+/*
    MOVIMENTAR CONTA
    Acha o cliente pelo numero (gaveta = numero - 1000), mostra o alerta
    e faz a operacao: deposito, saque, emprestimo ou titulo.
-   =================================================================== */
+*/
 void movimentarConta(struct cliente c[], int n) {
     int num, pos, tipo, operacao;
     float valor;
@@ -275,9 +272,9 @@ void movimentarConta(struct cliente c[], int n) {
 }
 
 
-/* ===================================================================
+/*
    FUNCOES DO FIBONACCI (feitas em sala de aula)
-   =================================================================== */
+*/
 
 /* termo "valor" da sequencia 0, 1, 1, 2, 3, 5, 8... (recursiva) */
 int fibonacci(int valor) {
