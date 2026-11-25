@@ -29,7 +29,7 @@ void consultarHistorico(struct cliente c[], int n);
 void efetuarSorteio(struct cliente c[], int n);
 void movimentarConta(struct cliente c[], int n);
 
-/* funcoes do Fibonacci (𝐹𝑛=𝐹𝑛−1+𝐹𝑛−2)⁠ - obs.: servem para entender padroes de crescimento, otimizar sistemas */
+
 int fibonacci(int valor);
 int somafibonacci(int valor);
 int ehprimo(int valor);
