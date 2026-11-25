@@ -56,7 +56,7 @@ int abrirBanco(struct cliente c[]) {
 */
 void consultarHistorico(struct cliente c[], int n) {
 
-    /* SECAO 1: saldo total do banco (cofrinho) */
+    /* OPCAO 1: saldo total do banco */
     float total = 0;
     for (int i = 0; i < n; i++) {
         total = total + c[i].saldoCorrente + c[i].saldoSalario + c[i].saldoPoupanca;
@@ -64,7 +64,7 @@ void consultarHistorico(struct cliente c[], int n) {
     printf("\n== Saldo Total do banco ==\n");
     printf("%d clientes | R$ %.2f\n", n, total);
 
-    /* SECAO 2: aptos a emprestimo */
+    /* OPCAO 2: aptos a emprestimo */
     printf("\n== Clientes Aptos a Emprestimos ==\n");
     for (int i = 0; i < n; i++) {
         if (c[i].temPoupanca == 1 && c[i].saldoPoupanca > 0 &&
@@ -74,7 +74,7 @@ void consultarHistorico(struct cliente c[], int n) {
         }
     }
 
-    /* SECAO 3: saldo negativo. O enunciado cita "conta salario" no
+    /* OPCAO 3: saldo negativo. O enunciado cita "conta salario" no
        historico, mas a regra do alerta fala em conta corrente; segui a regra. */
     printf("\n== Clientes com Saldo Negativo na Conta Corrente ==\n");
     for (int i = 0; i < n; i++) {
@@ -83,7 +83,7 @@ void consultarHistorico(struct cliente c[], int n) {
         }
     }
 
-    /* SECAO 4: aptos a titulos (salario entre R$ 1.000 e R$ 1.500) */
+    /* OPCAO 4: aptos a titulos (salario entre R$ 1.000 e R$ 1.500) */
     printf("\n== Clientes Aptos a Compra de Titulos ==\n");
     for (int i = 0; i < n; i++) {
         if (c[i].temSalario == 1 && c[i].saldoSalario >= 1000 && c[i].saldoSalario <= 1500) {
@@ -91,7 +91,7 @@ void consultarHistorico(struct cliente c[], int n) {
         }
     }
 
-    /* SECAO 5: contemplado no sorteio (quem tem premio > 0) */
+    /* OPCAO 5: contemplado no sorteio (quem tem premio > 0) */
     printf("\n== Clientes Contemplado no Sorteio ==\n");
     int achou = 0;
     for (int i = 0; i < n; i++) {
