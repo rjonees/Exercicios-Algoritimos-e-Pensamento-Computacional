@@ -7,11 +7,11 @@
 */
 struct cliente {
     char nome[50];
-    int numero;               /* 1000, 1001, 1002... */
+    int numero;              
 
-    int temCorrente;          /* conta 01 */
-    int temSalario;           /* conta 02 */
-    int temPoupanca;          /* conta 03 */
+    int temCorrente;         
+    int temSalario;           
+    int temPoupanca;          
 
     float saldoCorrente;
     float saldoSalario;
