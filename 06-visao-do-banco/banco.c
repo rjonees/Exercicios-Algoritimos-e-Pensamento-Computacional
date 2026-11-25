@@ -2,11 +2,11 @@
 #include "banco.h"
 
 
-/* ===================================================================
+/* 
    ABRIR O BANCO
    Cadastra n clientes, gera o numero da conta, aplica a regra
    corrente x salario e zera os saldos. Devolve n para a main.
-   =================================================================== */
+*/
 int abrirBanco(struct cliente c[]) {
     int n;
 
