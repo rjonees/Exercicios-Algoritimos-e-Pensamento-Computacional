@@ -1,17 +1,5 @@
-/*
- * Arquivo:     main.c
- * Descricao:   Visao do Banco - parte principal. So tem o MENU, que chama
- *              as funcoes do banco.c conforme a opcao escolhida.
- *
- * Compilar:    gcc main.c banco.c -o banco
- * Executar:    .\banco.exe
- *
- * Autora:      Amanda Baia
- * Disciplina:  Algoritmos e Pensamento Computacional - Profa. Joanacelle Caldas
- */
-
 #include <stdio.h>
-#include "banco.h"      /* aspas: o arquivo eh nosso, esta na mesma pasta  - chama as funcoes ora declaradas*/
+#include "banco.h"     
 
 int main() {
 
