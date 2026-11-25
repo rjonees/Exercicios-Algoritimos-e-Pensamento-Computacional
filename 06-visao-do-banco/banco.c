@@ -20,9 +20,9 @@ int abrirBanco(struct cliente c[]) {
         printf("\nNome do cliente %d: ", i + 1);
         scanf(" %49[^\n]", c[i].nome);
 
-        c[i].numero = 1000 + i;       /* numero automatico */
+        c[i].numero = 1000 + i;      
 
-        /* REGRA: repete enquanto tiver corrente E salario juntas */
+        
         do {
             printf("Tem conta corrente? (1 = sim, 0 = nao): ");
             scanf("%d", &c[i].temCorrente);
