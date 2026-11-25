@@ -1,16 +1,3 @@
-/*
- * Arquivo:     banco.c
- * Descricao:   "Capitulos" do banco: as funcoes completas de cada opcao
- *              do menu e as funcoes do Fibonacci feitas em sala de aula.
- *
- * Observacao:  o vetor c[] e passado para as funcoes "por endereco"
- *              (o nome do vetor ja e um endereco). Por isso, quando uma
- *              funcao muda c[i].saldo..., a mudanca vale tambem na main.
- *
- * Autora:      Amanda Baia
- * Disciplina:  Algoritmos e Pensamento Computacional - Profa. Joanacelle Caldas
- */
-
 #include <stdio.h>
 #include "banco.h"
 
